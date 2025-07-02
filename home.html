@@ -5,24 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome - Home</title>
     <style>
-        /* CSS for the home page */
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
         }
 
+        /* Navbar Styles */
+        .navbar {
+            background-color: #4e73df;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #2e59d9;
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Main content */
         .welcome-container {
-            background-color: white;
             padding: 40px;
+            background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             width: 350px;
+            margin: 50px auto;
         }
 
         .welcome-container h1 {
@@ -50,21 +80,43 @@
         .logout-btn:hover {
             background-color: #2e59d9;
         }
+
+        /* Flexbox centering for the body */
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
     </style>
 </head>
 <body>
 
-    <div class="welcome-container">
-        <h1>Welcome Back!</h1>
-        <p class="welcome-message">We're glad to see you again. Enjoy exploring your dashboard!</p>
-        <button class="logout-btn" onclick="logout()">Log Out</button>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Lab Exam</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="index.html" class="logout-btn">Log Out</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="welcome-container">
+            <h1>Welcome Back!</h1>
+            <p class="welcome-message">We're glad to see you again. Enjoy exploring your dashboard!</p>
+            <button class="logout-btn" onclick="logout()">Log Out</button>
+        </div>
     </div>
 
     <script>
         // Function to simulate log out
         function logout() {
             alert("Logging you out...");
-            // Here you can redirect the user to the login page or perform other actions
             window.location.href = "index.html"; // Redirect to login page
         }
     </script>
