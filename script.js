@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (username.value.trim() === "" || password.value.trim() === "") {
             event.preventDefault();
 
+
             alert("Both username and password are required.");
         }
     });
