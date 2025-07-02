@@ -1,0 +1,1 @@
+This project includes a basic login system with form validation, redirection after login, and a welcome page with a navbar. The login page (`index.html`) is where the user enters their credentials, and upon successful login, they are redirected to a landing page (`home.html`) where a welcome message is displayed.
